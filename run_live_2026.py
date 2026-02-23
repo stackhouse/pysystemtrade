@@ -56,6 +56,8 @@ def run_live_custom_portfolio():
             runner.run_backtest()
         print("      [SUCCESS] Expected optimal targets generated!")
     except Exception as e:
+        import traceback
+        traceback.print_exc()
         print(f"      [ERROR] Could not run systems: {e}")
         sys.exit(1)
         
