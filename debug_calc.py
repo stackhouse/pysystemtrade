@@ -20,7 +20,7 @@ def debug_generation():
         print(f"=== Capital DB: {strat_cap} ===")
         print(f"=== Notional Capital Config: {system.config.notional_trading_capital} ===")
         
-        inst = "SP500_micro"
+        inst = "GOLD_micro"
         print(f"=== Debugging Target for {inst} ===")
         
         try:
