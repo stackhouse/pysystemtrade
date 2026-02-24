@@ -6,7 +6,7 @@ from sysproduction.data.capital import dataCapital
 
 def seed_capital_for_live_system():
     strategy = "custom_2026_system"
-    target_capital = 5000000.0 # Raise account size to 5M to force execution natively
+    target_capital = 1000000.0  # Boosted for testing order sizing
     
     with dataBlob(log_name="Seed-Capital") as data:
         cap_db = dataCapital(data)
