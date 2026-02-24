@@ -509,3 +509,61 @@ and scheduled via cron with the 'run_process' wrapping logic.
 ==================================================================
    Live Execution Script Batch Complete!                          
 ==================================================================
+Configuring sim logging
+==================================================================
+               PySystemTrade Live 2026 Macro Portfolio            
+==================================================================
+This script orchestrates the daily trading batch sequentially.
+In full production, these steps are typically run asynchronously 
+and scheduled via cron with the 'run_process' wrapping logic.
+==================================================================
+
+[1/4] Calculating continuous back-adjusted prices from IB data...
+      [SUCCESS] Adjusted prices generated!
+
+[2/4] Running systems to calculate target positions...
+2026-02-23 21:57:22 WARNING matplotlib /Users/jacob/.matplotlib is not a writable directory
+2026-02-23 21:57:22 WARNING matplotlib Matplotlib created a temporary cache directory at /tmp/matplotlib-5ax8hnbh because there was an issue with the default path (/Users/jacob/.matplotlib); it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+2026-02-23 21:57:27 WARNING matplotlib.font_manager Matplotlib is building the font cache; this may take a moment.
+2026-02-23 21:57:40 INFO matplotlib.font_manager Failed to extract font properties from /System/Library/Fonts/SFCompact.ttf: 2686976 is not a valid StyleFlags
+2026-02-23 21:57:40 INFO matplotlib.font_manager Failed to extract font properties from /Library/Fonts/SF-Compact.ttf: 589824 is not a valid StyleFlags
+2026-02-23 21:57:40 INFO matplotlib.font_manager Failed to extract font properties from /System/Library/Fonts/SFIndia.ttc: Can not load face (SFNT font table missing; error code 0x8e)
+2026-02-23 21:57:40 INFO matplotlib.font_manager Failed to extract font properties from /System/Library/Fonts/LastResort.otf: tuple indices must be integers or slices, not str
+2026-02-23 21:57:40 INFO matplotlib.font_manager Failed to extract font properties from /System/Library/Fonts/Apple Color Emoji.ttc: Could not set the fontsize (invalid pixel size; error code 0x17)
+2026-02-23 21:57:41 INFO matplotlib.font_manager Failed to extract font properties from /System/Library/Fonts/Supplemental/NISC18030.ttf: Could not set the fontsize (invalid pixel size; error code 0x17)
+2026-02-23 21:57:41 INFO matplotlib.font_manager Failed to extract font properties from /System/Library/Fonts/SFNSMono.ttf: 393216 is not a valid StyleFlags
+2026-02-23 21:57:41 INFO matplotlib.font_manager Failed to extract font properties from /System/Library/Fonts/SFCompactItalic.ttf: 2686977 is not a valid StyleFlags
+2026-02-23 21:57:41 INFO matplotlib.font_manager Failed to extract font properties from /Library/Fonts/SF-Compact-Italic.ttf: 589825 is not a valid StyleFlags
+2026-02-23 21:57:41 INFO matplotlib.font_manager Failed to extract font properties from /System/Library/PrivateFrameworks/FontServices.framework/Resources/Reserved/PingFangUI.ttc: Can not load face (locations (loca) table missing; error code 0x90)
+2026-02-23 21:57:41 INFO matplotlib.font_manager generated new fontManager
+      -> Executing custom_2026_system rules...
+      [SUCCESS] Expected optimal targets generated!
+
+[3/4] Reconciling live portfolio state and generating orders...
+      -> Diffing orders for custom_2026_system...
+2026-02-23 21:57:42 WARNING Update-Strategy-Orders {'component': 'mongoInstrumentOrderStackData', 'strategy_name': 'custom_2026_system', 'instrument_code': 'SHATZ', 'instrument_order_id': ''} Adjusted order (Order ID:no order ID) Type best for custom_2026_system SHATZ, qty [0], fill [0]@ price, None Parent:no parent Children:no_children is zero, zero orders not allowed
+2026-02-23 21:57:42 WARNING Update-Strategy-Orders {'strategy_name': 'custom_2026_system', 'instrument_code': 'SHATZ', 'instrument_order_id': ''} Ignoring new order as either zero size or it replicates an existing order on the stack
+2026-02-23 21:57:42 WARNING Update-Strategy-Orders {'strategy_name': 'custom_2026_system', 'instrument_code': 'EUR_micro', 'instrument_order_id': ''} Ignoring new order as either zero size or it replicates an existing order on the stack
+2026-02-23 21:57:42 WARNING Update-Strategy-Orders {'strategy_name': 'custom_2026_system', 'instrument_code': 'EUROSTX', 'instrument_order_id': ''} Ignoring new order as either zero size or it replicates an existing order on the stack
+2026-02-23 21:57:42 WARNING Update-Strategy-Orders {'strategy_name': 'custom_2026_system', 'instrument_code': 'GOLD_micro', 'instrument_order_id': ''} Ignoring new order as either zero size or it replicates an existing order on the stack
+2026-02-23 21:57:42 WARNING Update-Strategy-Orders {'strategy_name': 'custom_2026_system', 'instrument_code': 'CORN', 'instrument_order_id': ''} Ignoring new order as either zero size or it replicates an existing order on the stack
+2026-02-23 21:57:42 WARNING Update-Strategy-Orders {'component': 'mongoInstrumentOrderStackData', 'strategy_name': 'custom_2026_system', 'instrument_code': 'CRUDE_W_micro', 'instrument_order_id': ''} Adjusted order (Order ID:no order ID) Type best for custom_2026_system CRUDE_W_micro, qty [0], fill [0]@ price, None Parent:no parent Children:no_children is zero, zero orders not allowed
+2026-02-23 21:57:42 WARNING Update-Strategy-Orders {'strategy_name': 'custom_2026_system', 'instrument_code': 'CRUDE_W_micro', 'instrument_order_id': ''} Ignoring new order as either zero size or it replicates an existing order on the stack
+2026-02-23 21:57:42 WARNING Update-Strategy-Orders {'component': 'mongoInstrumentOrderStackData', 'strategy_name': 'custom_2026_system', 'instrument_code': 'SOYBEAN_mini', 'instrument_order_id': ''} Adjusted order (Order ID:no order ID) Type best for custom_2026_system SOYBEAN_mini, qty [0], fill [0]@ price, None Parent:no parent Children:no_children is zero, zero orders not allowed
+2026-02-23 21:57:42 WARNING Update-Strategy-Orders {'strategy_name': 'custom_2026_system', 'instrument_code': 'SOYBEAN_mini', 'instrument_order_id': ''} Ignoring new order as either zero size or it replicates an existing order on the stack
+2026-02-23 21:57:42 WARNING Update-Strategy-Orders {'strategy_name': 'custom_2026_system', 'instrument_code': 'US5', 'instrument_order_id': ''} Ignoring new order as either zero size or it replicates an existing order on the stack
+2026-02-23 21:57:42 WARNING Update-Strategy-Orders {'strategy_name': 'custom_2026_system', 'instrument_code': 'COPPER', 'instrument_order_id': ''} Ignoring new order as either zero size or it replicates an existing order on the stack
+2026-02-23 21:57:42 WARNING Update-Strategy-Orders {'strategy_name': 'custom_2026_system', 'instrument_code': 'COPPER-micro', 'instrument_order_id': ''} Ignoring new order as either zero size or it replicates an existing order on the stack
+2026-02-23 21:57:42 WARNING Update-Strategy-Orders {'strategy_name': 'custom_2026_system', 'instrument_code': 'SP500_micro', 'instrument_order_id': ''} Ignoring new order as either zero size or it replicates an existing order on the stack
+      [SUCCESS] Order diff generated successfully!
+
+[4/4] Invoking PySystemTrade Stack Handler across IB...
+      -> Identifying any external position breaks...
+      -> Processing instrument targets to contract orders...
+      -> Pushing orders down to IB API...
+      -> Monitoring fills and completing internal tickets...
+      [SUCCESS] Interactive Brokers transmission complete!
+
+==================================================================
+   Live Execution Script Batch Complete!                          
+==================================================================
